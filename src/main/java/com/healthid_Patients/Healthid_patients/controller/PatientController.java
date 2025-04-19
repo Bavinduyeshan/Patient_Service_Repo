@@ -124,6 +124,7 @@ public class PatientController {
         return patientservice.getAllPatients();
     }
 
+
     @GetMapping("/get/{id}")
     public ResponseEntity<?> getPatientById(@PathVariable Integer id) {
 
@@ -278,4 +279,13 @@ public class PatientController {
         }
     }
 
+
+
+
+
+    @GetMapping("/count")
+    public  ResponseEntity<Long> getPatientCount(){
+        long count= patientservice.patinetCount();
+        return  ResponseEntity.ok(count);
+    }
 }

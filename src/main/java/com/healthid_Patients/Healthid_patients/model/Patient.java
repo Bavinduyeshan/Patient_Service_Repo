@@ -30,6 +30,10 @@ public class Patient {
     private String email;
 
     private String phone;
+
+
+
+    @Column(name = "date_of_birth", nullable = false)
     private LocalDate dateOfBirth;
 
     @Lob

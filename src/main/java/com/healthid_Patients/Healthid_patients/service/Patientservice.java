@@ -155,4 +155,9 @@ public class Patientservice {
     public void deletePatient(Integer patientId) {
         patientRepository.deleteById(patientId);
     }
+
+
+    public  long  patinetCount(){
+      return  patientRepository.count();
+    }
 }
